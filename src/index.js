@@ -6,6 +6,9 @@ import reportWebVitals from "./reportWebVitals";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Header } from "./components/Header";
 import { MovieDetail } from "./views/MovieDatails";
+import { Provider } from "react-redux";
+import store from "./store/store";
+import { Favoritos } from "./views/Favoritos";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +22,10 @@ const router = createBrowserRouter([
         path: "/movie/:id",
         element: <MovieDetail />,
       },
+      {
+        path: "/favoritos",
+        element: <Favoritos />,
+      },
     ],
   },
 ]);
@@ -26,7 +33,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );
 
