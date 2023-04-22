@@ -16,7 +16,7 @@ export const Movie = ({ movie }) => {
       </div>
       <div className="movie-excerpt">
         <h3>{movie.title}</h3>
-        <Link to={`/movie/${movie.id}`} className="btn btn-primary">
+        <Link to={`/movie/${movie.id}`} className="btn btn-primary my-2">
           Ver detalhes
         </Link>
         {favoritos.movies.find((m) => m.id === movie.id) ? (

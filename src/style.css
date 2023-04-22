@@ -7,6 +7,7 @@ body {
 .movie-item {
   background: #eee;
   padding: 10px 30px;
+  text-align: center;
 }
 
 .movie-item img {
@@ -16,4 +17,8 @@ body {
 .main-header {
   text-align: center;
   padding: 50px;
+}
+.movie-excerpt h3{
+  text-align: center;
+  padding-top: 10px;
 }
